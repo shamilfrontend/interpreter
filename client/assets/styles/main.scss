@@ -1,0 +1,74 @@
+@import "./base";
+
+html {
+  body {
+    .el-button.custom-el-button {
+      background-color: transparent;
+      border-color: transparent;
+      color: var(--color-blue);
+
+      &:hover {
+        background-color: transparent;
+        border-color: transparent;
+      }
+
+      &.icon-plus {
+        position: relative;
+        padding-left: 36px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 12px;
+          top: 50%;
+          z-index: 1;
+          transform: translateY(-50%);
+          width: 16px;
+          height: 16px;
+          background-image: url('/icons/icon-plus.svg');
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
+    .el-checkbox {
+      &__input {
+      }
+
+      &__inner {
+        width: 16px;
+        height: 16px;
+        background-color: #FAFBFC;
+        border: 1px solid #C1C7D0;
+        border-radius: 3px;
+
+        &::after {
+          left: 5px;
+          top: 3px;
+        }
+      }
+    }
+
+    .el-select.custom-full-width {
+      width: 100%;
+    }
+
+    .el-form-item {
+      &__label {
+        line-height: 16px!important;
+      }
+    }
+
+    .el-dialog {
+      &__header {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+      }
+
+      &__body {
+        padding: 10px 20px 20px;
+      }
+    }
+  }
+}
